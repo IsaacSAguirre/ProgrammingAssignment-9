@@ -4,17 +4,28 @@ class Enemy : public sf::RectangleShape
 {
 public:
     Enemy(sf::Vector2f& newSize, const sf::Vector2f& newPos,
-        const sf::Color& newColor, int setHealth, int setDamage) :
+        const sf::Color& newColor, int setHealth) :
         RectangleShape(newSize)
     {
         this->setFillColor(newColor);
         this->setPosition(newPos);
         health = setHealth;
-        damage = setDamage;
     }
 
     ~Enemy() {
 
+    }
+
+    int getHealth() {
+        return health;
+    }
+
+    void setHealth(int newHealth) {
+        health = newHealth;
+    }
+
+    void damage() {
+        --health;
     }
 
     virtual void enemyMovement() {
@@ -30,6 +41,4 @@ private:
 protected:
 
     int health;
-    int damage;
-
 };

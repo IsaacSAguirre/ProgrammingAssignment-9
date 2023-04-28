@@ -6,8 +6,8 @@ class SillyFella : public Enemy
 {
 public:
     SillyFella(sf::Vector2f& newSize, const sf::Vector2f& newPos,
-        const sf::Color& newColor, int& health, int& damage) :
-        Enemy(newSize, newPos, newColor, health, damage) {
+        const sf::Color& newColor, int health) :
+        Enemy(newSize, newPos, newColor, health) {
 
     }
 

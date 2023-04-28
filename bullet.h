@@ -9,7 +9,7 @@ public:
 	CircleShape bullet;
 	Vector2f velocity;
 	float speed;
-	Bullet(float radius = 5.f) : velocity(0.f, 0.f), speed(15.f)
+	Bullet(float radius = 5.f) : velocity(1000.f, 1000.f), speed(15.f)
 	{
 		this->bullet.setRadius(radius);
 		this->bullet.setFillColor(Color::Green);
