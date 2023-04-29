@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include "SFML/Graphics.hpp"
 using namespace std;
 
 class PlayerCharacter : public sf::CircleShape
@@ -43,8 +44,6 @@ public:
             move(-15, 0);
         }
     }
-
-
 
 private:
 
